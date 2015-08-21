@@ -1,0 +1,17 @@
+starting gevent on 127.0.0.1:8000...
+Traceback (most recent call last):
+  File "anyserver.py", line 365, in <module>
+    main()
+  File "anyserver.py", line 362, in main
+    options=options)
+  File "anyserver.py", line 314, in run
+    getattr(Servers, servername)(application, (ip, int(port)), options=options)
+  File "anyserver.py", line 99, in gevent
+    int(options.workers)) or 'default', log=None).serve_forever()
+  File "/usr/lib/pymodules/python2.7/gevent/baseserver.py", line 190, in serve_forever
+    self._stopped_event.wait()
+  File "/usr/lib/pymodules/python2.7/gevent/event.py", line 74, in wait
+    result = get_hub().switch()
+  File "/usr/lib/pymodules/python2.7/gevent/hub.py", line 164, in switch
+    return greenlet.switch(self)
+KeyboardInterrupt
